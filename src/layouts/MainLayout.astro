@@ -1,0 +1,38 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&family=Montserrat:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <Header />
+    <main class="main-layout">
+      <slot />
+    </main>
+    <Footer />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        ScrollReveal().reveal("section", {
+          distance: "50px",
+          duration: 1000,
+          easing: "ease-in-out",
+          origin: "bottom",
+          reset: true, // Esto hace que el efecto se repita al hacer scroll
+        });
+      });
+    </script>
+  </body>
+</html>

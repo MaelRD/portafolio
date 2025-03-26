@@ -1,0 +1,68 @@
+---
+
+---
+
+<header class="navbar">
+  <nav>
+    <button onclick="document.getElementById('about').scrollIntoView()"
+      >Sobre mí</button
+    >
+    <button onclick="document.getElementById('education').scrollIntoView()"
+      >Educación</button
+    >
+    <button onclick="document.getElementById('experience').scrollIntoView()"
+      >Proyectos</button
+    >
+    <button onclick="document.getElementById('skills').scrollIntoView()"
+      >Habilidades</button
+    >
+    <button onclick="document.getElementById('contact').scrollIntoView()"
+      >Contacto</button
+    >
+  </nav>
+</header>
+
+<style>
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #000000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    z-index: 1000;
+  }
+
+  .navbar nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .navbar button {
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 10px;
+    transition: color 0.3s ease;
+  }
+
+  .navbar button:hover {
+    color: #d32f2f; /* Cambiar a rojo elegante */
+  }
+
+  @media (max-width: 768px) {
+    .navbar nav {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .navbar button {
+      font-size: 0.875rem;
+      padding: 8px;
+    }
+  }
+</style>
